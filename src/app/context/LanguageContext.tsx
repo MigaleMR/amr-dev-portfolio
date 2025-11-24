@@ -78,6 +78,10 @@ const translations = {
     'project.schoolify.description': 'A full-stack collaborative college project designed to provide a virtual classroom platform.',
     'project.cashtrackr.description': 'A platform that allows users to create budgets and their respective expenses (work in progress).',
     'project.agendafy.description': 'A comprehensive appointment scheduling and calendar management system designed for efficient time management.',
+    'project.portfolio.description': 'My first portfolio website built to showcase my projects and skills as a developer',
+    'project.portfolio.title': 'Portfolio',
+    'project.ecocolones.description': 'Eco-Colones is a web platform that encourages recycling by connecting users, affiliated businesses and collection centers. Users earn points for recycling, track transactions, and locate nearby collection points on an interactive map',
+    'project.ecocolones.title': 'EcoColones',
     
     // Footer
     'footer.description': 'Software Engineer Student passionate about creating innovative web solutions. Specialized in Full-Stack development with modern technologies.',
@@ -152,6 +156,10 @@ const translations = {
     'project.schoolify.description': 'Un proyecto universitario colaborativo full-stack diseñado para proporcionar una plataforma de aula virtual.',
     'project.cashtrackr.description': 'Una plataforma que permite a los usuarios crear presupuestos y sus respectivos gastos (trabajo en progreso).',
     'project.agendafy.description': 'Un sistema integral de programación de citas y gestión de calendario diseñado para una administración eficiente del tiempo.',
+    'project.portfolio.description': 'Mi primer sitio web de portafolio creado para mostrar mis proyectos y habilidades como desarrollador',
+    'project.portfolio.title': 'Portafolio',
+    'project.ecocolones.description': 'Eco-Colones es una plataforma web que fomenta el reciclaje conectando a usuarios, negocios y centros de recolección. Los usuarios obtienen puntos por reciclar, registran transacciones y localizan puntos de recolección cercanos en un mapa interactivo',
+    'project.ecocolones.title': 'EcoColones',
     
     // Footer
     'footer.description': 'Estudiante de Ingeniería de Software apasionado por crear soluciones web innovadoras. Especializado en desarrollo Full-Stack con tecnologías modernas.',

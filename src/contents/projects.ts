@@ -46,4 +46,20 @@ export const projects: Project[] = [
     demoLink: "https://agendafy.vercel.app",
     image: "/projects/not-available.jpg",
   },
+  {
+    title: "Portfolio",
+    description: "My first portfolio website built to showcase my projects and skills as a developer",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/MigaleMR/amr-dev-portfolio",
+    demoLink: "https://amr-dev-portfolio.vercel.app",
+    image: "/projects/icono_ale2.png",
+  },
+  {
+    title: "EcoColones",
+    description: "Eco-Colones is a web platform that encourages recycling by connecting users, affiliated businesses and collection centers. Users earn points for recycling, track transactions, and locate nearby collection points on an interactive map",
+    technologies: ["React", "Next.js", "TypeScript", "PostgreSQL", "Supabase"],
+    githubLink: "https://github.com/EcoColonesInc/EcoColones",
+    demoLink: "https://ecocolones.vercel.app",
+    image: "/projects/logo_EcoColones.png",
+  }
 ];

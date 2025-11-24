@@ -7,10 +7,12 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/utils/animation";
 import { useLanguage } from "../context/LanguageContext";
+import { useTheme } from "../context/ThemeContext";
 import AnimatedText from "./AnimatedText";
 
 const Projects = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   return (
     <section className="py-20 container max-w-7xl mx-auto px-4">
@@ -33,16 +35,32 @@ const Projects = () => {
           >
             <div className=" relative aspect-video mb-4 rounded-lg overflow-hidden">
               <Image
-                src={project.image}
+                src={
+                  project.title.toLowerCase() === "portfolio"
+                    ? theme === "light"
+                      ? "/projects/icono_ale.png"
+                      : "/projects/icono_ale2.png"
+                    : project.image
+                }
                 alt={project.title}
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              {(() => {
+                const key = `project.${project.title.toLowerCase()}.title`;
+                const translated = t(key);
+                return translated === key ? project.title : translated;
+              })()}
+            </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              {t(`project.${project.title.toLowerCase()}.description`)}
+              {(() => {
+                const key = `project.${project.title.toLowerCase()}.description`;
+                const translated = t(key);
+                return translated === key ? project.description : translated;
+              })()}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.technologies.map((tech) => (
