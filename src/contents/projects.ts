@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     title: "Portfolio",
     description: "My first portfolio website built to showcase my projects and skills as a developer",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
     githubLink: "https://github.com/MigaleMR/amr-dev-portfolio",
     demoLink: "https://amr-dev-portfolio.vercel.app",
     image: "/projects/icono_ale2.png",
