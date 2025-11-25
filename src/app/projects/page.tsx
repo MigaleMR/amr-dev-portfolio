@@ -6,10 +6,12 @@ import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, pageTransition } from "@/utils/animation";
+import { useTheme } from "../context/ThemeContext";
 import { useLanguage } from "../context/LanguageContext";
 
-const Projects = () =>{
-    const { t } = useLanguage();
+const Projects = () => {
+  const { t } = useLanguage();
+  const { theme } = useTheme();
 
     return(
         <motion.div {...pageTransition} className="container max-w-7xl mx-auto py-20">
@@ -32,7 +34,13 @@ const Projects = () =>{
           >
             <div className=" relative aspect-video mb-4 rounded-lg overflow-hidden">
               <Image
-                src={project.image}
+                src={
+                  project.title.toLowerCase() === "portfolio"
+                    ? theme === "light"
+                      ? "/projects/icono_ale.png"
+                      : "/projects/icono_ale2.png"
+                    : project.image
+                }
                 alt={project.title}
                 fill
                 className="object-contain"
@@ -51,10 +59,10 @@ const Projects = () =>{
               ))}
             </div>
             <div className="flex gap-4 mt-2">
-                <Link href={project.githubLink} target='_blank' className='flex items-center gap-2 text-white hover:text-primary transition-colors'>
+                <Link href={project.githubLink} target='_blank' className='flex items-center gap-2 dark:text-white text-gray-600 hover:text-primary transition-colors'>
                     <FaGithub className="w-5 h-5" /> <span>{t("projects.code")}</span>
                 </Link>
-                <Link href={project.demoLink} target='_blank' className='flex items-center gap-2 text-white hover:text-primary transition-colors'>
+                <Link href={project.demoLink} target='_blank' className='flex items-center gap-2 dark:text-white text-gray-600 hover:text-primary transition-colors'>
                     <FaExternalLinkAlt className="w-5 h-5" /> <span>{t("projects.link")}</span>
                 </Link>
             </div>
