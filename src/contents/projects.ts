@@ -59,7 +59,7 @@ export const projects: Project[] = [
     description: "Eco-Colones is a web platform that encourages recycling by connecting users, affiliated businesses and collection centers. Users earn points for recycling, track transactions, and locate nearby collection points on an interactive map",
     technologies: ["React", "Next.js", "TypeScript", "PostgreSQL", "Supabase"],
     githubLink: "https://github.com/EcoColonesInc/EcoColones",
-    demoLink: "https://ecocolones.vercel.app",
+    demoLink: "https://eco-colones.vercel.app",
     image: "/projects/logo_EcoColones.png",
   }
 ];
